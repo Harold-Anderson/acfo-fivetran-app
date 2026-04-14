@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACFO Fivetran App - Anderson CFO LLC</title>
+    <title>ACFO Fivetran App - Amazon Selling Partner Data Connector</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a1a2e; background: #f8f9fa; line-height: 1.6; }
-        header { background: #1a1a2e; color: #fff; padding: 3rem 2rem; text-align: center; }
+        header { background: #1a1a2e; color: #fff; padding: 2.5rem 2rem; text-align: center; }
+        header img { width: 180px; height: 180px; margin-bottom: 1rem; border-radius: 12px; }
         header h1 { font-size: 2rem; margin-bottom: 0.25rem; }
         header p { font-size: 1.1rem; opacity: 0.85; }
         .container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
@@ -18,25 +19,76 @@
         ul { margin: 0.5rem 0 1rem 1.5rem; color: #444; }
         li { margin-bottom: 0.4rem; }
         a { color: #2563eb; }
+        .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem; }
+        .feature-card { background: #f8f9fa; border-radius: 8px; padding: 1.25rem; }
+        .feature-card h3 { margin-top: 0; color: #1a1a2e; }
+        .pricing-box { background: #f0f4ff; border: 1px solid #c7d6ff; border-radius: 8px; padding: 1.5rem; text-align: center; margin-top: 1rem; }
+        .pricing-box a { font-weight: 600; }
         footer { text-align: center; padding: 2rem; color: #888; font-size: 0.9rem; }
+        @media (max-width: 600px) { .feature-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
     <header>
+        <img src="logo.png" alt="Anderson CFO Logo" width="180" height="180">
         <h1>ACFO Fivetran App</h1>
-        <p>Anderson CFO LLC</p>
+        <p>Amazon Selling Partner Data Connector by Anderson CFO LLC</p>
     </header>
     <div class="container">
         <section>
             <h2>About</h2>
-            <p>ACFO Fivetran App is an internal data connector for syncing Amazon Selling Partner data to a data warehouse via Fivetran for business analytics and reporting. This app is for internal use only and is not available for purchase.</p>
-            <h3>Features</h3>
+            <p>ACFO Fivetran App connects your Amazon Selling Partner account to a cloud data warehouse through Fivetran. It syncs your Amazon sales, inventory, pricing, and catalog data so you can analyze your business performance with powerful reporting and analytics tools.</p>
+            <p>Built by <a href="https://acfo.co">Anderson CFO LLC</a>, a data and analytics consultancy specializing in ecommerce operations. We help Amazon sellers turn their data into actionable insights.</p>
+        </section>
+
+        <section>
+            <h2>Features &amp; Services</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Order Data Sync</h3>
+                    <p>Automatically sync order history, returns, and fulfillment data from Amazon Seller Central to your data warehouse for complete sales visibility.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Inventory Tracking</h3>
+                    <p>Monitor inventory levels, restock recommendations, and FBA storage metrics with up-to-date data pulled directly from the Selling Partner API.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Pricing &amp; Catalog Data</h3>
+                    <p>Track competitive pricing, catalog listings, and product details to optimize your Amazon storefront and pricing strategy.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Analytics &amp; Reporting</h3>
+                    <p>Once your data is in the warehouse, build custom dashboards and reports to track KPIs like revenue trends, sell-through rates, profit margins, and advertising ROI. Combine Amazon data with other sales channels for a unified view of your business.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>How It Works</h2>
+            <ol style="margin: 0.5rem 0 1rem 1.5rem; color: #444;">
+                <li style="margin-bottom: 0.6rem;"><strong>Authorize</strong> &mdash; Connect your Amazon Seller account through a secure OAuth flow.</li>
+                <li style="margin-bottom: 0.6rem;"><strong>Sync</strong> &mdash; Fivetran automatically extracts and loads your Selling Partner data into BigQuery or another supported warehouse.</li>
+                <li style="margin-bottom: 0.6rem;"><strong>Analyze</strong> &mdash; Use your preferred BI tool (Looker Studio, Tableau, etc.) to build dashboards, track trends, and generate reports.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Pricing</h2>
+            <p>Pricing varies based on data volume, number of seller accounts, and the level of analytics support required.</p>
+            <div class="pricing-box">
+                <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>Request a Quote</strong></p>
+                <p>Contact us at <a href="mailto:harold@acfo.co">harold@acfo.co</a> to discuss your needs and receive a customized quote.</p>
+            </div>
+        </section>
+
+        <section id="support">
+            <h2>Support</h2>
+            <p>We're here to help with setup, troubleshooting, or questions about your data.</p>
             <ul>
-                <li>Syncs pricing, inventory, and order data from Amazon Selling Partner API</li>
-                <li>Enables real-time business analytics and reporting</li>
+                <li><strong>Email:</strong> <a href="mailto:harold@acfo.co">harold@acfo.co</a></li>
+                <li><strong>Phone:</strong> <a href="tel:+15039222264">(503) 922-2264</a></li>
             </ul>
-            <h3 id="support">Support</h3>
-            <p>For questions or support, contact <a href="mailto:harold@andersoncfo.com">harold@andersoncfo.com</a>.</p>
+            <p>Support is available in English. We typically respond within one business day.</p>
         </section>
 
         <section>
@@ -44,22 +96,22 @@
             <p><strong>Effective Date:</strong> April 10, 2026</p>
 
             <h3>Data Collection</h3>
-            <p>This application accesses Amazon Selling Partner data on behalf of Anderson CFO LLC. Data collected includes pricing information, inventory levels, and order data as provided by the Amazon Selling Partner API.</p>
+            <p>This application accesses Amazon Selling Partner data on behalf of authorized users. Data collected includes pricing information, inventory levels, order data, and catalog information as provided by the Amazon Selling Partner API.</p>
 
             <h3>Use of Data</h3>
-            <p>All data collected is used solely for internal business analytics and reporting purposes by Anderson CFO LLC. Data is transmitted to a data warehouse via Fivetran for analysis.</p>
+            <p>All data collected is used for business analytics and reporting purposes. Data is transmitted to a cloud data warehouse via Fivetran for analysis and reporting.</p>
 
             <h3>Third-Party Sharing</h3>
-            <p>We do not sell, trade, or share collected data with third parties. Data is processed through Fivetran as a data pipeline service and stored in our private data warehouse. No data is shared beyond what is necessary for the operation of this internal tool.</p>
+            <p>We do not sell, trade, or share collected data with third parties. Data is processed through Fivetran as a data pipeline service and stored in a private data warehouse. No data is shared beyond what is necessary for the operation of this service.</p>
 
             <h3>Data Retention</h3>
-            <p>Data is retained in our data warehouse for as long as it is needed for business analytics purposes. Data may be deleted upon request or when it is no longer required for business operations.</p>
+            <p>Data is retained in the data warehouse for as long as needed for business analytics purposes. Data may be deleted upon request or when no longer required.</p>
 
             <h3>Security</h3>
             <p>We implement industry-standard security measures to protect data during transmission and storage, including encryption and access controls.</p>
 
             <h3>Contact</h3>
-            <p>For privacy-related inquiries, contact <a href="mailto:harold@andersoncfo.com">harold@andersoncfo.com</a>.</p>
+            <p>For privacy-related inquiries, contact <a href="mailto:harold@acfo.co">harold@acfo.co</a>.</p>
         </section>
 
         <section>
@@ -69,20 +121,20 @@
             <h3>Acceptance of Terms</h3>
             <p>By accessing or using the ACFO Fivetran App, you agree to be bound by these Terms of Use.</p>
 
-            <h3>Internal Use Only</h3>
-            <p>This application is designed and intended for internal use by Anderson CFO LLC only. It is not available for purchase, license, or use by external parties.</p>
+            <h3>Service Description</h3>
+            <p>ACFO Fivetran App is a data connector service that syncs Amazon Selling Partner data to a cloud data warehouse for analytics and reporting. Use of this service requires authorization from Anderson CFO LLC.</p>
 
             <h3>Disclaimer of Warranties</h3>
             <p>This application is provided "as is" and "as available" without warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
 
             <h3>Limitation of Liability</h3>
-            <p>In no event shall Anderson CFO LLC be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to the use of this application, regardless of the cause of action or the theory of liability.</p>
+            <p>In no event shall Anderson CFO LLC be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to the use of this application.</p>
 
             <h3>Governing Law</h3>
-            <p>These Terms of Use shall be governed by and construed in accordance with the laws of the State of Texas, without regard to its conflict of law principles.</p>
+            <p>These Terms of Use shall be governed by and construed in accordance with the laws of the State of Texas.</p>
 
             <h3>Contact</h3>
-            <p>For questions regarding these terms, contact <a href="mailto:harold@andersoncfo.com">harold@andersoncfo.com</a>.</p>
+            <p>For questions regarding these terms, contact <a href="mailto:harold@acfo.co">harold@acfo.co</a>.</p>
         </section>
     </div>
     <footer>
